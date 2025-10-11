@@ -369,7 +369,6 @@
         "body": [
             "#[test]",
             "fn ${1:name}() {",
-            "    ${2:todo!();}",
             "}"
         ],
         "description": "#[test]"
