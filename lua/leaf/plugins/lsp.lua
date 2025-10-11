@@ -31,7 +31,11 @@ return {
 					vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
 					vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 					vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
-					vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>") -- using telescope
+					vim.keymap.set("n", "gr", function()
+						require("telescope.builtin").lsp_references({
+							trim_text = true,
+						})
+					end)
 					vim.keymap.set("n", "<leader>f", function()
 						vim.lsp.buf.format({ async = true })
 					end, opts)
@@ -60,7 +64,6 @@ return {
 					},
 				},
 			})
-			vim.lsp.enable("lua_ls")
 
 			-- TypeScript/JavaScript LSP
 			vim.lsp.config("tsserver", {
@@ -76,7 +79,6 @@ return {
 				},
 				root_markers = { "package.json", "tsconfig.json", "jsconfig.json", ".git" },
 			})
-			vim.lsp.enable("tsserver")
 
 			-- Python LSP
 			vim.lsp.config("pyright", {
@@ -93,7 +95,6 @@ return {
 					},
 				},
 			})
-			vim.lsp.enable("pyright")
 
 			-- C/C++ LSP
 			vim.lsp.config("clangd", {
@@ -101,18 +102,27 @@ return {
 				cmd = {
 					"clangd",
 					"--compile-commands-dir=.",
-					"--clang-tidy",
+					-- "--clang-tidy",
 				},
 			})
-			vim.lsp.enable("clangd")
 
 			vim.lsp.config("rust-analyzer", {
 				capabilities = capabilities,
-				cmd = {
-					"rust-analyzer",
-				},
+				cmd = { "rust-analyzer" },
 				filetypes = { "rust" },
+				settings = {
+					["rust-analyzer"] = {
+						cargo = { allFeatures = true },
+						procMacro = { enable = true },
+					},
+				},
 			})
+
+			-- activate lsp
+			vim.lsp.enable("lua_ls")
+			vim.lsp.enable("tsserver")
+			vim.lsp.enable("pyright")
+			vim.lsp.enable("clangd")
 			vim.lsp.enable("rust-analyzer")
 
 			-- to activate linting

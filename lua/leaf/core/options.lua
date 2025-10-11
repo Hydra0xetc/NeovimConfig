@@ -27,7 +27,7 @@ vim.opt.smartcase = true
 vim.opt.termguicolors = true
 vim.opt.background = "dark"
 vim.opt.scrolloff = 13
-vim.opt.signcolumn = "no"
+vim.opt.signcolumn = "yes"
 
 vim.opt.backspace = { "start", "eol", "indent" }
 
@@ -39,9 +39,11 @@ vim.opt.colorcolumn = ""
 
 vim.opt.clipboard:append("unnamedplus")
 
-vim.g.autoformat = true
+-- vim.g.autoformat = true
 vim.loader.enable()
 
 -- vim.opt.mouse = ""
 
 vim.opt.mousefocus = false
+vim.opt.lazyredraw = true
+vim.opt.shell = "zsh"

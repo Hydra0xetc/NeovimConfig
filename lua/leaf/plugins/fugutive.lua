@@ -1,6 +1,6 @@
 return {
 	"tpope/vim-fugitive",
-	enabeled = false,
+	enabled = true,
 	cmd = { "Git", "Gstatus", "Gcommit", "Gpush" },
 	event = "VeryLazy",
 	config = function()

@@ -14,7 +14,7 @@ return {
 				vertical_line = "│",
 				left_top = "╭",
 				left_bottom = "╰",
-				right_arrow = "@",
+				right_arrow = ">",
 			},
 		},
 		indent = {
@@ -28,7 +28,4 @@ return {
 			enable = false,
 		},
 	},
-	config = function(_, opts)
-		require("hlchunk").setup(opts)
-	end,
 }

@@ -93,6 +93,7 @@ vim.keymap.set("n", "<leader>Ct", function()
 	}, function(args)
 		if args then
 			local command = "RUSTFLAGS='-A warnings' cargo test"
+			-- local command = "cargo test"
 			if args ~= "" then
 				command = command .. " " .. args
 			end
@@ -130,3 +131,4 @@ vim.keymap.set({ "n", "v" }, "<Up>", "gk")
 vim.keymap.set("n", ";", "<nop>")
 
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww fds<CR>")
+vim.keymap.set("n", "<C-w>", "<cmd>silent !tmux neww fdz<CR>")

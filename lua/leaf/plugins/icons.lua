@@ -1,5 +1,6 @@
 return {
 	"nvim-tree/nvim-web-devicons",
+	enabled = true,
 	priority = 1000,
 	opts = {
 		override_by_extension = {
