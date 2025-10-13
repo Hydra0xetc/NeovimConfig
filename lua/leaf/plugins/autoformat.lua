@@ -31,7 +31,7 @@ return {
 					clang_format = {
 						prepend_args = {
 							"--style",
-							"{BasedOnStyle: llvm, IndentWidth: 4, UseTab: Never, TabWidth: 4, ColumnLimit: 120}",
+							"{BasedOnStyle: llvm, IndentWidth: 4, UseTab: Never, TabWidth: 4, ColumnLimit: 120, AlignConsecutiveMacros: true, AlignConsecutiveAssignments: false, AlignConsecutiveDeclarations: false}",
 						},
 					},
 					rustfmt = {
@@ -39,14 +39,6 @@ return {
 					},
 				},
 			})
-
-			vim.keymap.set({ "n", "v" }, "<leader>f", function()
-				conform.format({
-					lsp_fallback = true,
-					async = true,
-					timeout_ms = 5000,
-				})
-			end, { desc = "Format file" })
 		end,
 	},
 }

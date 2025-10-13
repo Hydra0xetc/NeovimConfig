@@ -16,6 +16,18 @@ return {
 				left_bottom = "╰",
 				right_arrow = ">",
 			},
+			-- Tambahkan exclude untuk buffer tertentu
+			exclude_filetypes = {
+				"help",
+				"dashboard",
+				"packer",
+				"NvimTree",
+				"Trouble",
+				"lspinfo",
+				"checkhealth",
+				"man",
+				"", -- buffer tanpa filetype
+			},
 		},
 		indent = {
 			enable = false,
@@ -28,4 +40,14 @@ return {
 			enable = false,
 		},
 	},
+	config = function(_, opts)
+		-- Safety check sebelum setup
+		local ok, hlchunk = pcall(require, "hlchunk")
+		if not ok then
+			vim.notify("hlchunk.nvim not found!", vim.log.levels.ERROR)
+			return
+		end
+
+		hlchunk.setup(opts)
+	end,
 }
