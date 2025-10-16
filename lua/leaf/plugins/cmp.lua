@@ -1,6 +1,7 @@
 return {
 	"hrsh7th/nvim-cmp",
-	event = "InsertEnter",
+	-- event = "InsertEnter",
+	event = "VeryLazy",
 	dependencies = {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
@@ -21,6 +22,20 @@ return {
 				expand = function(args)
 					luasnip.lsp_expand(args.body)
 				end,
+			},
+			completion = {
+				completeopt = "menu,menuone,noinsert",
+				max_item_count = 10,
+			},
+			window = {
+				completion = {
+					max_height = 12,
+					scrolloff = 3,
+					scrollbar = true, -- tampilkan scrollbar
+				},
+				documentation = {
+					max_height = 15,
+				},
 			},
 			mapping = cmp.mapping.preset.insert({
 				["<C-b>"] = cmp.mapping.scroll_docs(-4),

@@ -47,3 +47,5 @@ vim.loader.enable()
 vim.opt.mousefocus = false
 vim.opt.lazyredraw = true
 vim.opt.shell = "zsh"
+
+vim.opt.showmode = false

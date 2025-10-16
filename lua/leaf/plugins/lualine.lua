@@ -9,6 +9,7 @@ end
 
 return {
 	"nvim-lualine/lualine.nvim",
+	enabled = true,
 	event = { "BufReadPost", "BufNewFile" },
 	opts = function()
 		return {

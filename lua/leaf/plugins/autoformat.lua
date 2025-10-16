@@ -31,12 +31,15 @@ return {
 					clang_format = {
 						prepend_args = {
 							"--style",
-							"{BasedOnStyle: llvm, IndentWidth: 4, UseTab: Never, TabWidth: 4, ColumnLimit: 120, AlignConsecutiveMacros: true, AlignConsecutiveAssignments: false, AlignConsecutiveDeclarations: false}",
+							"{BasedOnStyle: Google, IndentWidth: 4, UseTab: Never, TabWidth: 4, ColumnLimit: 80, AlignConsecutiveMacros: true, AlignConsecutiveAssignments: false, AlignConsecutiveDeclarations: false, BinPackArguments: false, BinPackParameters: false, AllowAllParametersOfDeclarationOnNextLine: false, BreakArrays: true}",
 						},
 					},
-					rustfmt = {
-						-- prepend_args = { "--edition", "2021" },
-					},
+					-- rustfmt = {
+					-- 	prepend_args = {
+					-- 		"--edition",
+					-- 		"2024",
+					-- 	},
+					-- },
 				},
 			})
 		end,

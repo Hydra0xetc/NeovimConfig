@@ -178,5 +178,7 @@ return {
 
 		vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "Telescope recent files" })
 		vim.keymap.set("n", "<leader>fk", builtin.keymaps, { desc = "Telescope keymaps" })
+		vim.keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", { desc = "Telescope branches" })
+		vim.keymap.set("n", "<leader>fd", "<cmd>Telescope diagnostics<CR>")
 	end,
 }
