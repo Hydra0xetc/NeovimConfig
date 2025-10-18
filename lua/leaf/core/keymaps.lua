@@ -102,17 +102,27 @@ vim.keymap.set("n", "<leader>Ct", function()
 	end)
 end, { desc = "Cargo test with args" })
 
+vim.keymap.set("n", "<leader>ma", function()
+	vim.ui.input({
+		prompt = "Make args: ",
+	}, function(args)
+		if args then
+			local command = "make"
+			if args ~= "" then
+				command = command .. " " .. args
+			end
+			run_in_terminal(command, "make")
+		end
+	end)
+end, { desc = "Cargo test with args" })
+
+vim.keymap.set("n", "<leader>mi", function()
+	run_in_terminal("intercept-build make -j2", "intercept build")
+end, { desc = "Make Intercept" })
+
 vim.keymap.set("n", "<leader>Cb", function()
 	run_in_terminal("cargo build", "cargo_build")
 end, { desc = "Cargo build" })
-
-vim.keymap.set("n", "<leader>mm", function()
-	run_in_terminal("make -j3", "make")
-end, { desc = "Make" })
-
-vim.keymap.set("n", "<leader>mc", function()
-	run_in_terminal("make clean", "make_clean")
-end, { desc = "Make clean" })
 
 -- npm start
 vim.keymap.set("n", "<leader>mp", function()
@@ -132,3 +142,15 @@ vim.keymap.set("n", ";", "<nop>")
 
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww fds<CR>")
 vim.keymap.set("n", "<C-w>", "<cmd>silent !tmux neww fdz<CR>")
+
+-- update snippets
+vim.keymap.set("n", "<C-a>", function()
+	print("snippets updated")
+	os.execute("$HOME/.config/nvim/lua/leaf/plugins/update_snippets.sh >/dev/null 2>&1")
+end)
+
+-- keymap for scroll command
+vim.api.nvim_set_keymap("c", "<Up>", 'wildmenumode() ? "\\<Left>" : "\\<Up>"', { expr = true, noremap = true })
+vim.api.nvim_set_keymap("c", "<Down>", 'wildmenumode() ? "\\<Right>" : "\\<Down>"', { expr = true, noremap = true })
+vim.api.nvim_set_keymap("c", "<Left>", 'wildmenumode() ? "\\<Up>" : "\\<Left>"', { expr = true, noremap = true })
+vim.api.nvim_set_keymap("c", "<Right>", 'wildmenumode() ? "\\<Down>" : "\\<Right>"', { expr = true, noremap = true })

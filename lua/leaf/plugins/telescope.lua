@@ -1,5 +1,6 @@
 return {
 	"nvim-telescope/telescope.nvim",
+	envent = { "ButReadPre", "BufReadPost" },
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },

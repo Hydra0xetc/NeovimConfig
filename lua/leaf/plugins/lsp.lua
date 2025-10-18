@@ -2,9 +2,9 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		event = { "BufReadPre", "BufNewFile" },
+		-- event = { "VeryLazy", "BufNewFile" },
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
-			event = "BufWritePre",
 		},
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -126,11 +126,35 @@ return {
 			vim.lsp.enable("rust-analyzer")
 
 			-- to activate linting
+			local diagnostics_enabled = true
+			local diagnostics_signs = {
+				text = {
+					[vim.diagnostic.severity.ERROR] = "", -- logo error
+					[vim.diagnostic.severity.WARN] = "", -- logo warning
+					[vim.diagnostic.severity.INFO] = "", -- logo info
+					[vim.diagnostic.severity.HINT] = "", -- logo hint
+				},
+			}
+
+			local function toggle_diagnostics()
+				diagnostics_enabled = not diagnostics_enabled
+				vim.diagnostic.config({
+					virtual_text = diagnostics_enabled,
+					underline = diagnostics_enabled,
+					signs = diagnostics_enabled and diagnostics_signs or false,
+					update_in_insert = false,
+				})
+				print("Diagnostics " .. (diagnostics_enabled and "enabled" or "disabled"))
+			end
+
 			vim.diagnostic.config({
 				virtual_text = true,
 				underline = true,
+				signs = diagnostics_signs,
 				update_in_insert = false,
 			})
+
+			vim.keymap.set("n", "<leader>fl", toggle_diagnostics, { desc = "Toggle diagnostics" })
 		end,
 	},
 }

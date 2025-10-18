@@ -13,6 +13,7 @@ return {
 					typescript = { "prettier" },
 					javascriptreact = { "prettier" },
 					typescriptreact = { "prettier" },
+					-- python = { "autopep8" },
 					-- html = { "prettier" },
 					-- css = { "prettier" },
 					-- markdown = { "prettier" },
@@ -38,6 +39,12 @@ return {
 					-- 	prepend_args = {
 					-- 		"--edition",
 					-- 		"2024",
+					-- 	},
+					-- },
+					-- autopep8 = {
+					-- 	prepend_args = {
+					-- 		"--aggressive",
+					-- 		"--max-line-length=100",
 					-- 	},
 					-- },
 				},

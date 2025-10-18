@@ -1,7 +1,7 @@
 vim.opt.nu = true
 vim.opt.rnu = true
 
--- vim.opt.guicursor = ""
+vim.opt.guicursor = ""
 
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
@@ -49,3 +49,10 @@ vim.opt.lazyredraw = true
 vim.opt.shell = "zsh"
 
 vim.opt.showmode = false
+
+-- activate scroll command menu
+vim.opt.wildmenu = true
+vim.opt.wildmode = "full"
+
+-- disable ~
+vim.opt.fillchars = { eob = " " }

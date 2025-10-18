@@ -1,6 +1,5 @@
 return {
 	"hrsh7th/nvim-cmp",
-	-- event = "InsertEnter",
 	event = "VeryLazy",
 	dependencies = {
 		"hrsh7th/cmp-buffer",
@@ -14,7 +13,6 @@ return {
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
 
-		-- Load friendly-snippets
 		require("luasnip.loaders.from_vscode").lazy_load()
 
 		cmp.setup({
@@ -25,17 +23,19 @@ return {
 			},
 			completion = {
 				completeopt = "menu,menuone,noinsert",
-				max_item_count = 10,
 			},
 			window = {
 				completion = {
-					max_height = 12,
-					scrolloff = 3,
-					scrollbar = true, -- tampilkan scrollbar
+					max_height = 8,
+					scrolloff = 2,
+					scrollbar = true,
 				},
 				documentation = {
-					max_height = 15,
+					max_height = 12,
 				},
+			},
+			performance = {
+				max_view_entries = 7,
 			},
 			mapping = cmp.mapping.preset.insert({
 				["<C-b>"] = cmp.mapping.scroll_docs(-4),
@@ -63,11 +63,11 @@ return {
 				end, { "i", "s" }),
 			}),
 			sources = cmp.config.sources({
-				{ name = "nvim_lsp" },
-				{ name = "luasnip" },
-				{ name = "path" },
+				{ name = "nvim_lsp", max_item_count = 5 }, -- ✅ Atau batasi per source
+				{ name = "luasnip", max_item_count = 3 },
+				{ name = "path", max_item_count = 3 },
 			}, {
-				{ name = "buffer" },
+				{ name = "buffer", max_item_count = 3 },
 			}),
 		})
 	end,

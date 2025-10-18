@@ -49,5 +49,10 @@
         "prefix": "uuid",
         "body": "${UUID}",
         "description": "A Version 4 UUID"
+    },
+    "env": {
+        "prefix": "shebang",
+        "body": ["#!/usr/bin/env ${1:bash}"],
+        "description": "make shebang"
     }
 }

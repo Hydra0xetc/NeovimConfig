@@ -265,8 +265,8 @@
     "for": {
         "prefix": "for",
         "body": [
-            "for ${1:pat} in ${2:expr} {",
-            "    ${3:todo!();}",
+            "for ${1:pat} in ${2:} {",
+            "    ",
             "}"
         ],
         "description": "for … in … { … }"
@@ -369,6 +369,7 @@
         "body": [
             "#[test]",
             "fn ${1:name}() {",
+            "    ",
             "}"
         ],
         "description": "#[test]"
