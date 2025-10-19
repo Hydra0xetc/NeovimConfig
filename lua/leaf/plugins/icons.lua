@@ -24,11 +24,11 @@ return {
 				icon = "",
 				name = "Html",
 			},
-			["lua"] = {
-				color = "#366B8A",
-				icon = "",
-				name = "Lua",
-			},
+			-- ["lua"] = {
+			-- 	color = "#366B8A",
+			-- 	icon = "",
+			-- 	name = "Lua",
+			-- },
 		},
 	},
 }
