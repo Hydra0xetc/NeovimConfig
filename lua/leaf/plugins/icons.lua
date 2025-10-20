@@ -9,11 +9,11 @@ return {
 				icon = "",
 				name = "C",
 			},
-			["python"] = {
-				color = "#ffff00",
-				icon = "",
-				name = "Python",
-			},
+			-- ["python"] = {
+			-- 	color = "#ffff00",
+			-- 	icon = "",
+			-- 	name = "Python",
+			-- },
 			["js"] = {
 				color = "#f7df1e",
 				icon = "",

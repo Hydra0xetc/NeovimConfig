@@ -112,7 +112,8 @@ return {
 
 		return {
 			options = {
-				theme = bubbles_theme,
+				-- theme = bubbles_theme,
+				theme = "auto",
 				globalstatus = true,
 				refresh = { statusline = 1000 },
 				component_separators = { left = "", right = " " },
@@ -125,7 +126,7 @@ return {
 					{
 						"filename",
 						-- path = 1, -- Menampilkan relative path
-						-- symbols = { modified = "  ", readonly = "  ", unnamed = "  " },
+						symbols = { modified = "  ", readonly = "  ", unnamed = "  " },
 					},
 				},
 				lualine_x = {

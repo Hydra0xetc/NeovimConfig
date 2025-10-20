@@ -1,7 +1,7 @@
 vim.opt.nu = true
 vim.opt.rnu = true
 
-vim.opt.guicursor = ""
+-- vim.opt.guicursor = ""
 
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
