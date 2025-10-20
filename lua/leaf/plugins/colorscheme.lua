@@ -18,8 +18,8 @@ return {
 			local current_colorscheme = vim.g.colors_name or ""
 
 			if hour >= 21 or hour < 5 then
-				if current_colorscheme ~= "tokyonight-night" then
-					vim.cmd("colorscheme tokyonight-night")
+				if current_colorscheme ~= "tokyonight-storm" then
+					vim.cmd("colorscheme tokyonight-storm")
 				end
 			else
 				if current_colorscheme ~= "tokyonight-storm" then
