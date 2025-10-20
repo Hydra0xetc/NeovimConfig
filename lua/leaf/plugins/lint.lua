@@ -33,7 +33,7 @@ return {
 			"--stdin-filename",
 		}
 
-		vim.api.nvim_create_autocmd({ "BufWritePost", "InsertLeave", "BufEnter" }, {
+		vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter" }, {
 			group = lint_augroup,
 			callback = function()
 				lint.try_lint()

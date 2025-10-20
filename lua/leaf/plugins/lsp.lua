@@ -85,12 +85,12 @@ return {
 				capabilities = capabilities,
 				cmd = { "/data/data/com.termux/files/usr/bin/basedpyright-langserver", "--stdio" },
 				settings = {
-					python = {
+					basedpyright = {
 						analysis = {
 							autoSearchPaths = true,
 							useLibraryCodeForTypes = true,
 							-- diagnosticMode = "openFilesOnly",
-							typeCheckingMode = "basic",
+							typeCheckingMode = "off",
 						},
 					},
 				},
