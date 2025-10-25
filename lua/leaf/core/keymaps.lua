@@ -157,3 +157,14 @@ vim.api.nvim_set_keymap("c", "<Right>", 'wildmenumode() ? "\\<Down>" : "\\<Right
 
 vim.keymap.set({ "n", "v" }, "<END>", "g<END>")
 vim.keymap.set({ "n", "v" }, "<HOME>", "g<HOME>")
+
+vim.keymap.set("n", "<leader>tc", function()
+	local current = vim.opt.clipboard:get()
+	if vim.tbl_contains(current, "unnamedplus") then
+		vim.opt.clipboard = ""
+		vim.notify("Clipboard syncing OFF", vim.log.levels.INFO)
+	else
+		vim.opt.clipboard = "unnamedplus"
+		vim.notify("Clipboard syncing ON", vim.log.levels.INFO)
+	end
+end, { desc = "Toggle clipboard sync" })

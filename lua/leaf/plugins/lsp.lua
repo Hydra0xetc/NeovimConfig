@@ -80,6 +80,16 @@ return {
 				root_markers = { "package.json", "tsconfig.json", "jsconfig.json", ".git" },
 			})
 
+			vim.lsp.config("vscode-html-language-server", {
+				capabilities = capabilities,
+				cmd = { "/data/data/com.termux/files/usr/bin/vscode-html-language-server", "--stdio" },
+				filetypes = {
+					"html",
+					"htmlx",
+					"htmldjango",
+				},
+			})
+
 			-- Python LSP
 			vim.lsp.config("pyright", {
 				capabilities = capabilities,
