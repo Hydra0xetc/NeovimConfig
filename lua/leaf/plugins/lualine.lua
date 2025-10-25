@@ -131,11 +131,11 @@ return {
 				},
 				lualine_x = {
 					-- macro_recording,
-					-- {
-					--   "filetype",
-					--   colored = true,
-					--   icon_only = false,
-					-- },
+					{
+						"filetype",
+						colored = true,
+						icon_only = false,
+					},
 					-- "encoding",
 					-- "fileformat",
 				},
