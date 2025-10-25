@@ -155,5 +155,5 @@ vim.api.nvim_set_keymap("c", "<Down>", 'wildmenumode() ? "\\<Right>" : "\\<Down>
 vim.api.nvim_set_keymap("c", "<Left>", 'wildmenumode() ? "\\<Up>" : "\\<Left>"', { expr = true, noremap = true })
 vim.api.nvim_set_keymap("c", "<Right>", 'wildmenumode() ? "\\<Down>" : "\\<Right>"', { expr = true, noremap = true })
 
-vim.keymap.set({ "n", "v", "i" }, "<END>", "g<END>")
-vim.keymap.set({ "n", "v", "i" }, "<HOME>", "g<HOME>")
+vim.keymap.set({ "n", "v" }, "<END>", "g<END>")
+vim.keymap.set({ "n", "v" }, "<HOME>", "g<HOME>")
