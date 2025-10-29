@@ -80,6 +80,7 @@ return {
 				root_markers = { "package.json", "tsconfig.json", "jsconfig.json", ".git" },
 			})
 
+			-- Html
 			vim.lsp.config("vscode-html-language-server", {
 				capabilities = capabilities,
 				cmd = { "/data/data/com.termux/files/usr/bin/vscode-html-language-server", "--stdio" },
@@ -87,6 +88,17 @@ return {
 					"html",
 					"htmlx",
 					"htmldjango",
+				},
+			})
+
+			vim.lsp.config("vscode-css-language-server", {
+				capabilities = capabilities,
+				cmd = { "/data/data/com.termux/files/usr/bin/vscode-css-language-server", "--stdio" },
+				filetypes = {
+					"html",
+					"css",
+					"scss",
+					"less",
 				},
 			})
 
@@ -100,7 +112,7 @@ return {
 							autoSearchPaths = true,
 							useLibraryCodeForTypes = true,
 							-- diagnosticMode = "openFilesOnly",
-							typeCheckingMode = "off",
+							typeCheckingMode = "basic",
 						},
 					},
 				},
@@ -134,6 +146,8 @@ return {
 			vim.lsp.enable("pyright")
 			vim.lsp.enable("clangd")
 			vim.lsp.enable("rust-analyzer")
+			vim.lsp.enable("vscode-css-language-server")
+			vim.lsp.enable("vscode-html-language-server")
 
 			-- to activate linting
 			local diagnostics_enabled = true

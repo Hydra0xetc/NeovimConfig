@@ -4,12 +4,12 @@ return {
 	opts = {
 		-- Signs configuration
 		signs = {
-			add = { text = "+" },
-			change = { text = "│" },
-			delete = { text = "_" },
-			topdelete = { text = "‾" },
-			changedelete = { text = "~" },
-			untracked = { text = "┆" },
+			add = { text = "▎", show_count = false },
+			change = { text = "▎", show_count = false },
+			delete = { text = "▁", show_count = false },
+			topdelete = { text = "▔", show_count = false },
+			changedelete = { text = "▋", show_count = false },
+			untracked = { text = "┆", show_count = false },
 		},
 
 		update_debounce = 200,
@@ -76,7 +76,7 @@ return {
 			map("n", "<leader>hD", function()
 				gs.diffthis("~")
 			end)
-			map("n", "<leader>td", gs.toggle_deleted)
+			-- map("n", "<leader>td", gs.toggle_deleted)
 
 			-- Text object
 			map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")
