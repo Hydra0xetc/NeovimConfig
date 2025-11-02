@@ -1,10 +1,11 @@
 return {
 	"lewis6991/gitsigns.nvim",
 	event = { "BufReadPre", "BufNewFile" },
+	enabled = true,
 	opts = {
 		-- Signs configuration
 		signs = {
-			add = { text = "▎", show_count = false },
+			add = { text = "+", show_count = false },
 			change = { text = "▎", show_count = false },
 			delete = { text = "▁", show_count = false },
 			topdelete = { text = "▔", show_count = false },
@@ -17,6 +18,7 @@ return {
 		attach_to_untracked = false,
 
 		current_line_blame = true,
+
 		current_line_blame_opts = {
 			delay = 1500,
 			virt_text_pos = "eol",

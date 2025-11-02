@@ -1,14 +1,28 @@
 return {
 	"stevearc/oil.nvim",
+	event = { "BufEnter", "UiEnter" },
 	config = function()
 		require("oil").setup({
-			default_file_explorer = true,
-			columns = {},
+			default_file_explorer = false,
+			columns = {
+				-- "icon",
+			},
 			view_options = {
 				show_hidden = true,
+				is_always_hidden = function(name)
+					local hidden_dirs = { "..", ".git", ".env" }
+
+					for i = 1, #hidden_dirs do
+						if hidden_dirs[i] == name then
+							return true
+						end
+					end
+					return false
+				end,
 			},
 			keymaps = {
 				["<C-s>"] = false,
+				["b"] = { "actions.parent", mode = "n" },
 			},
 		})
 

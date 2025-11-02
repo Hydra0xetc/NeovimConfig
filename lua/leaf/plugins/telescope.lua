@@ -1,6 +1,6 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	envent = { "ButReadPre", "BufReadPost" },
+	event = { "VeryLazy", "BufReadPost" },
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
@@ -64,7 +64,7 @@ return {
 					timeoutlen = 200,
 				},
 				cache_picker = {
-					num_pickers = 15,
+					num_pickers = 25,
 				},
 				dynamic_preview_title = true,
 				path_display = { "truncate" },
@@ -75,15 +75,19 @@ return {
 					find_files = {
 						hidden = true,
 						find_command = {
-							"rg",
-							"--files",
+							"fd",
+							"--type",
+							"f",
+							"--max-depth",
+							"6",
 							"--hidden",
-							"--glob",
-							"!**/.git/*",
-							"--glob",
-							"!**/node_modules/*",
-							"--glob",
-							"!**/.cache/*",
+							"--exclude",
+							".git",
+							"--exclude",
+							"node_modules",
+							"--exclude",
+							".cache",
+							"--strip-cwd-prefix",
 						},
 						file_ignore_patterns = {
 							"^.git/",
@@ -128,13 +132,17 @@ return {
 		vim.keymap.set("n", "<leader> ", function()
 			builtin.find_files({
 				find_command = {
-					"rg",
-					"--files",
+					"fd",
+					"--type",
+					"f",
+					"--max-depth",
+					"6",
 					"--hidden",
-					"--glob",
-					"!**/.git/*",
-					"--glob",
-					"!**/node_modules/*",
+					"--exclude",
+					".git",
+					"--exclude",
+					"node_modules",
+					"--strip-cwd-prefix",
 				},
 			})
 		end, { desc = "Telescope find files" })
@@ -161,11 +169,15 @@ return {
 				prompt_title = "< NEOVIM CONFIG >",
 				cwd = vim.fn.stdpath("config"),
 				find_command = {
-					"rg",
-					"--files",
+					"fd",
+					"--type",
+					"f",
+					"--max-depth",
+					"6",
 					"--hidden",
-					"--glob",
-					"!**/.git/*",
+					"--exclude",
+					".git",
+					"--strip-cwd-prefix",
 				},
 				layout_config = {
 					vertical = {

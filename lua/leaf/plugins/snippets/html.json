@@ -342,6 +342,26 @@
         "description": "HTML - Defines a template for a html5 document",
         "scope": "text.html"
     },
+    "htmlxml": {
+        "prefix": "htmlxml",
+        "body": [
+            "<?xml version=\"${1:1.0}\" encoding=\"${2:UTF-8}\"?>",
+            "<!DOCTYPE html>",
+            "<html lang=\"${3:en}\" xmlns=\"http://www.w3.org/1999/xhtml\">",
+            "\t<head>",
+            "\t\t<meta charset=\"${4:UTF-8}\" />",
+            "\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />",
+            "\t\t<title>$5</title>",
+            "\t\t<link href=\"${6:css/style.css}\" rel=\"stylesheet\" />",
+            "\t</head>",
+            "\t<body>",
+            "\t$0",
+            "\t</body>",
+            "</html>"
+        ],
+        "description": "HTML with XML declaration - Defines a template for XHTML/HTML with XML prolog",
+        "scope": "text.html"
+    },
     "i": {
         "prefix": "i",
         "body": "<i>$1</i>$2",

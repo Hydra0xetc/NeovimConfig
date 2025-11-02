@@ -1,10 +1,11 @@
 return {
 	"folke/tokyonight.nvim",
 	lazy = false,
+	-- enabled = false,
 	event = { "UIEnter" },
 	priority = 1000,
 	opts = {
-		style = "storm",
+		style = "moon",
 		transparent = false,
 		terminal_colors = true,
 	},
@@ -18,12 +19,12 @@ return {
 			local current_colorscheme = vim.g.colors_name or ""
 
 			if hour >= 21 or hour < 5 then
-				if current_colorscheme ~= "tokyonight-storm" then
-					vim.cmd("colorscheme tokyonight-storm")
+				if current_colorscheme ~= "tokyonight-night" then
+					vim.cmd("colorscheme tokyonight-night")
 				end
 			else
-				if current_colorscheme ~= "tokyonight-storm" then
-					vim.cmd("colorscheme tokyonight-storm")
+				if current_colorscheme ~= "tokyonight-moon" then
+					vim.cmd("colorscheme tokyonight-moon")
 				end
 			end
 		end

@@ -14,8 +14,8 @@ return {
 					javascriptreact = { "prettier" },
 					typescriptreact = { "prettier" },
 					-- python = { "autopep8" },
-					-- html = { "prettier" },
-					-- css = { "prettier" },
+					html = { "prettier" },
+					css = { "prettier" },
 					-- markdown = { "prettier" },
 					c = { "clang_format" },
 					cpp = { "clang_format" },
@@ -32,7 +32,7 @@ return {
 					clang_format = {
 						prepend_args = {
 							"--style",
-							"{BasedOnStyle: Google, IndentWidth: 4, UseTab: Never, TabWidth: 4, ColumnLimit: 80, AlignConsecutiveMacros: true, AlignConsecutiveAssignments: false, AlignConsecutiveDeclarations: false, BinPackArguments: false, BinPackParameters: false, AllowAllParametersOfDeclarationOnNextLine: false, BreakArrays: true}",
+							"{BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never, TabWidth: 4, ColumnLimit: 80, AlignConsecutiveMacros: true, AlignConsecutiveAssignments: false, AlignConsecutiveDeclarations: false, BinPackArguments: false, BinPackParameters: false, AllowAllParametersOfDeclarationOnNextLine: false, BreakArrays: true}",
 						},
 					},
 					-- rustfmt = {

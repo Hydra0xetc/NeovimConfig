@@ -9,8 +9,8 @@
         "body": ["/*$0", " */"],
         "description": "Convenient multiline comment"
     },
-    "Starter Template": {
-        "prefix": "st",
+    "Starter Template2": {
+        "prefix": "sta",
         "body": [
             "#include <stdio.h>",
             "",
@@ -23,7 +23,7 @@
         "description": "Standard starter template for a tiny C program"
     },
     "Starter Template": {
-        "prefix": "stt",
+        "prefix": "st",
         "body": [
             "#include <stdio.h>",
             "",
@@ -36,7 +36,7 @@
         "description": "Standard starter template for a tiny C program"
     },
     "Preprocessor Starter Template": {
-        "prefix": "#st",
+        "prefix": "#sts",
         "body": [
             "#include <assert.h>",
             "#include <errno.h>",

@@ -1,6 +1,8 @@
 return {
+	enabled = false,
 	"nvimdev/dashboard-nvim",
-	lazy = false,
+	-- lazy = false,
+	event = "UIEnter",
 	opts = function()
 		local logo = [[
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -50,14 +52,14 @@ return {
                         icon = " ",
                         key = "n"
                     },
-                    {
-                        action = function()
-                            vim.cmd("Telescope live_grep")
-                        end,
-                        desc = " Find Text",
-                        icon = " ",
-                        key = "g"
-                    },
+                    -- {
+                    --     action = function()
+                    --         vim.cmd("Telescope live_grep")
+                    --     end,
+                    --     desc = " Find Text",
+                    --     icon = " ",
+                    --     key = "g"
+                    -- },
                     {
                         action = function()
                             vim.cmd('Telescope find_files cwd=' .. vim.fn.stdpath("config"))

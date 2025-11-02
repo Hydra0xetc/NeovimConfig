@@ -143,11 +143,11 @@ vim.keymap.set("n", ";", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww fds<CR>")
 vim.keymap.set("n", "<C-w>", "<cmd>silent !tmux neww fdz<CR>")
 
--- change snippets
--- vim.keymap.set("n", "<C-a>", function()
--- 	print("snippets updated")
--- 	os.execute("$HOME/.config/nvim/lua/leaf/plugins/update_snippets.sh >/dev/null 2>&1")
--- end)
+-- update snippets
+vim.keymap.set("n", "<C-a>", function()
+	print("snippets updated")
+	os.execute("$HOME/.config/nvim/lua/leaf/plugins/update_snippets.sh >/dev/null 2>&1")
+end)
 
 -- keymap for scroll command
 vim.api.nvim_set_keymap("c", "<Up>", 'wildmenumode() ? "\\<Left>" : "\\<Up>"', { expr = true, noremap = true })
@@ -168,3 +168,6 @@ vim.keymap.set("n", "<leader>tc", function()
 		vim.notify("Clipboard syncing ON", vim.log.levels.INFO)
 	end
 end, { desc = "Toggle clipboard sync" })
+
+-- esc twice for normal mode in terminal mode
+vim.keymap.set("t", "<esc><esc>", "<C-\\><C-n>")

@@ -91,6 +91,7 @@ return {
 				},
 			})
 
+			-- Css
 			vim.lsp.config("vscode-css-language-server", {
 				capabilities = capabilities,
 				cmd = { "/data/data/com.termux/files/usr/bin/vscode-css-language-server", "--stdio" },
