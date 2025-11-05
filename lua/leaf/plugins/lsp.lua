@@ -103,6 +103,17 @@ return {
 				},
 			})
 
+			-- Bash
+			vim.lsp.config("bash-language-server", {
+				capabilities = capabilities,
+				cmd = { "/data/data/com.termux/files/usr/bin/bash-language-server", "start" },
+				filetypes = {
+					"sh",
+					"bash",
+					"zsh",
+				},
+			})
+
 			-- Python LSP
 			vim.lsp.config("pyright", {
 				capabilities = capabilities,
@@ -149,6 +160,7 @@ return {
 			vim.lsp.enable("rust-analyzer")
 			vim.lsp.enable("vscode-css-language-server")
 			vim.lsp.enable("vscode-html-language-server")
+			vim.lsp.enable("bash-language-server")
 
 			-- to activate linting
 			local diagnostics_enabled = true

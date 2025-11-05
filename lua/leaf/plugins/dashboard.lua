@@ -1,5 +1,5 @@
 return {
-	enabled = false,
+	-- enabled = false,
 	"nvimdev/dashboard-nvim",
 	-- lazy = false,
 	event = "UIEnter",

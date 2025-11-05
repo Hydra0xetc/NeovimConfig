@@ -1,3 +1,4 @@
+---@diagnostic disable: deprecated
 local function macro_recording()
 	local recording = vim.fn.reg_recording()
 	if recording == "" then

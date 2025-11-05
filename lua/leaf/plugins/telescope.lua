@@ -1,6 +1,6 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	event = { "VeryLazy", "BufReadPost" },
+	event = { "UiEnter", "BufReadPost" },
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
