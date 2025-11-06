@@ -1,9 +1,7 @@
 return {
 	"sphamba/smear-cursor.nvim",
 	opts = {},
-	-- opts = {
-	-- 	cursor_color = "#ffffff",
-	-- },
+	-- enabled = false, -- uncomment this for disable smear
 	-- opts = { -- Default  Range
 	-- 	stiffness = 0.8, -- 0.6      [0, 1]
 	-- 	trailing_stiffness = 0.6, -- 0.45     [0, 1]
