@@ -166,10 +166,10 @@ return {
 			local diagnostics_enabled = true
 			local diagnostics_signs = {
 				text = {
-					[vim.diagnostic.severity.ERROR] = "", -- logo error
-					[vim.diagnostic.severity.WARN] = "", -- logo warning
-					[vim.diagnostic.severity.INFO] = "", -- logo info
-					[vim.diagnostic.severity.HINT] = "", -- logo hint
+					[vim.diagnostic.severity.ERROR] = "",
+					[vim.diagnostic.severity.WARN] = "",
+					[vim.diagnostic.severity.INFO] = "",
+					[vim.diagnostic.severity.HINT] = "",
 				},
 			}
 

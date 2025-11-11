@@ -155,12 +155,13 @@ vim.keymap.set({ "n", "v" }, "<HOME>", "g<HOME>")
 vim.keymap.set("n", "<leader>tc", function()
 	---@diagnostic disable-next-line: undefined-field
 	local current = vim.opt.clipboard:get()
+
 	if vim.tbl_contains(current, "unnamedplus") then
-		vim.opt.clipboard = "unnamedplus"
-		vim.notify("Clipboard syncing ON", vim.log.levels.INFO)
-	else
 		vim.opt.clipboard = ""
 		vim.notify("Clipboard syncing OFF", vim.log.levels.INFO)
+	else
+		vim.opt.clipboard = "unnamedplus"
+		vim.notify("Clipboard syncing ON", vim.log.levels.INFO)
 	end
 end, { desc = "Toggle clipboard sync" })
 

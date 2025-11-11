@@ -4,7 +4,7 @@ return {
 	event = { "UIEnter" },
 	priority = 1000,
 	opts = {
-		style = "moon",
+		style = "moon", -- moon, storm, night, day
 		transparent = false,
 		terminal_colors = true,
 	},

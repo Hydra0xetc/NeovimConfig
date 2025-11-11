@@ -11,7 +11,7 @@ return {
 
 		telescope.setup({
 			defaults = {
-				border = false,
+				border = true,
 				vimgrep_arguments = {
 					"rg",
 					"--color=never",

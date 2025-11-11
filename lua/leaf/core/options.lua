@@ -37,6 +37,7 @@ vim.opt.backspace = { "start", "eol", "indent" }
 vim.opt.updatetime = 80
 vim.opt.colorcolumn = ""
 
+---@diagnostic disable-next-line: undefined-field
 vim.opt.clipboard:append("unnamedplus")
 
 -- vim.g.autoformat = true

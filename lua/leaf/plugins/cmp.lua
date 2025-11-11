@@ -26,11 +26,13 @@ return {
 			},
 			window = {
 				completion = {
+					border = "single", -- single, double, rounded
 					max_height = 8,
 					scrolloff = 2,
 					scrollbar = true,
 				},
 				documentation = {
+					border = "single", -- single, double, rounded
 					max_height = 12,
 				},
 			},

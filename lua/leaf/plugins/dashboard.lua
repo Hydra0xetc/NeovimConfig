@@ -62,8 +62,31 @@ return {
                     -- },
                     {
                         action = function()
-                            vim.cmd('Telescope find_files cwd=' .. vim.fn.stdpath("config"))
+                            local builtin = require("telescope.builtin")
+                            builtin.find_files({
+                                prompt_title = "< NEOVIM CONFIG >",
+                                cwd = vim.fn.stdpath("config"),
+                                find_command = {
+                                    "fd",
+                                    "--type",
+                                    "f",
+                                    "--max-depth",
+                                    "6",
+                                    "--hidden",
+                                    "--exclude",
+                                    ".git",
+                                    "--strip-cwd-prefix",
+                                },
+                                layout_config = {
+                                    vertical = {
+                                        height = 0.95,
+                                        width = 0.9,
+                                        preview_height = 0.7,
+                                    },
+                                },
+                            })
                         end,
+
                         desc = " Config",
                         icon = " ",
                         key = "c"
