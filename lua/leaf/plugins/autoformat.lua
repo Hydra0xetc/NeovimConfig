@@ -27,12 +27,16 @@ return {
 				},
 				formatters = {
 					prettier = {
-						prepend_args = { "--tab-width", "4", "--use-tabs", "false" },
+						prepend_args = {
+							"--tab-width",
+							"4",
+							"--use-tabs",
+							"false",
+						},
 					},
 					clang_format = {
 						prepend_args = {
-							"--style",
-							"{BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never, TabWidth: 4, ColumnLimit: 80, AlignConsecutiveMacros: true, AlignConsecutiveAssignments: false, AlignConsecutiveDeclarations: false, BinPackArguments: false, BinPackParameters: false, AllowAllParametersOfDeclarationOnNextLine: false, BreakArrays: true}",
+							"--style=file",
 						},
 					},
 					-- rustfmt = {

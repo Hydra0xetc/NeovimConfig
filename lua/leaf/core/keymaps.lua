@@ -93,7 +93,6 @@ vim.keymap.set("n", "<leader>Ct", function()
 	}, function(args)
 		if args then
 			local command = "RUSTFLAGS='-A warnings' cargo test"
-			-- local command = "cargo test"
 			if args ~= "" then
 				command = command .. " " .. args
 			end
@@ -137,11 +136,6 @@ vim.keymap.set({ "n", "v" }, "j", "gj")
 vim.keymap.set({ "n", "v" }, "k", "gk")
 vim.keymap.set({ "n", "v" }, "<Down>", "gj")
 vim.keymap.set({ "n", "v" }, "<Up>", "gk")
-
-vim.keymap.set("n", ";", "<nop>")
-
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww fds<CR>")
-vim.keymap.set("n", "<C-w>", "<cmd>silent !tmux neww fdz<CR>")
 
 -- keymap for scroll command
 vim.api.nvim_set_keymap("c", "<Up>", 'wildmenumode() ? "\\<Left>" : "\\<Up>"', { expr = true, noremap = true })

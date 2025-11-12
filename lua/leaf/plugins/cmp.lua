@@ -46,6 +46,7 @@ return {
 				["<C-e>"] = cmp.mapping.abort(),
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
 			}),
+			---@diagnostic disable-next-line: undefined-field
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp", max_item_count = 5 },
 				{ name = "luasnip", max_item_count = 3 },
