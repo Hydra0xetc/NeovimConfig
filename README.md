@@ -101,6 +101,15 @@ nvim
 | `<space>gs`           | `n`      |  Open git status in split window          |
 | `<space>gd`           | `n`      |  Open git diff in split window            |
 
+## Shortcuts for Neogen
+
+| **Keybinding**        | **Mode** | **Description**                           |
+|-----------------------|----------|-------------------------------------------|
+| `<space>df`           | `n`      |  Generete funtion documentation           |
+| `<space>dc`           | `n`      |  Generete class documentation             |
+| `<space>dt`           | `n`      |  Generete type documentation             |
+| `<space>dF`           | `n`      |  Generete file documentation             |
+
 # Custom shortcuts
 
 | **Keybinding**        | **Mode** | **Description**                           |
