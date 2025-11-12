@@ -43,7 +43,7 @@ nvim
   - `v`: **Visual mode**.
   - `x`: **Visual mode**.
 
-# Shortcuts for Lsp
+## Shortcuts for Lsp
 
 | **Keybinding**        | **Mode** | **Description**                           |
 |-----------------------|----------|-------------------------------------------|
@@ -55,7 +55,7 @@ nvim
 | `<space>wr`           | `n`      | remove workspace folder                   |
 | `<space>rn`           | `n`      | Rename symbol                             |
 
-# Shortcuts for Bufferline
+## Shortcuts for Bufferline
 
 | **Keybinding**        | **Mode** | **Description**                           |
 |-----------------------|----------|-------------------------------------------|
@@ -63,7 +63,7 @@ nvim
 | `L`                   | `n`      | Go to next buffer                         |
 | `<space>bd`           | `n`      | Delete a buffer                           |
 
-# Shortcuts for Telescope
+## Shortcuts for Telescope
 
 | **Keybinding**        | **Mode** | **Description**                           |
 |-----------------------|----------|-------------------------------------------|
@@ -78,7 +78,7 @@ nvim
 | `<space>gb`           | `n`      | Telescope find branch                     |
 | `<space>td`           | `n`      | Telescope find todo comments              |
 
-# Shortcuts for Nvim-tree
+## Shortcuts for Nvim-tree
 
 | **Keybinding**        | **Mode** | **Description**                           |
 |-----------------------|----------|-------------------------------------------|
@@ -88,20 +88,20 @@ nvim
 | `d`                   | `n`      | Delete a file or directory                |
 | `d`                   | `n`      | Create a file or directory                |
 
-# Shortcuts for Flash
+## Shortcuts for Flash
 
 | **Keybinding**        | **Mode** | **Description**                           |
 |-----------------------|----------|-------------------------------------------|
 | `s`                   | `n`      | Trigger flash                             |
 
-# Shortcuts for Fugutive
+## Shortcuts for Fugutive
 
 | **Keybinding**        | **Mode** | **Description**                           |
 |-----------------------|----------|-------------------------------------------|
 | `<space>gs`           | `n`      |  Open git status in split window          |
 | `<space>gd`           | `n`      |  Open git diff in split window            |
 
-## Custom Keymaps
+# Custom shortcuts
 
 | **Keybinding**        | **Mode** | **Description**                           |
 |-----------------------|----------|-------------------------------------------|
