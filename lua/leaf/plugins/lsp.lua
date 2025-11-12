@@ -36,9 +36,6 @@ return {
 							trim_text = true,
 						})
 					end)
-					vim.keymap.set("n", "<leader>f", function()
-						vim.lsp.buf.format({ async = true })
-					end, opts)
 				end,
 			})
 

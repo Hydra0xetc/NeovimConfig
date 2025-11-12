@@ -132,19 +132,18 @@ end, { desc = "Npm start" })
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- use gj/gk instead of using j/k
-vim.keymap.set({ "n", "v" }, "j", "gj")
-vim.keymap.set({ "n", "v" }, "k", "gk")
-vim.keymap.set({ "n", "v" }, "<Down>", "gj")
-vim.keymap.set({ "n", "v" }, "<Up>", "gk")
+-- vim.keymap.set({ "n", "v" }, "j", "gj")
+-- vim.keymap.set({ "n", "v" }, "k", "gk")
+-- vim.keymap.set({ "n", "v" }, "<Down>", "gj")
+-- vim.keymap.set({ "n", "v" }, "<Up>", "gk")
+-- vim.keymap.set({ "n", "v" }, "<END>", "g<END>")
+-- vim.keymap.set({ "n", "v" }, "<HOME>", "g<HOME>")
 
 -- keymap for scroll command
 vim.api.nvim_set_keymap("c", "<Up>", 'wildmenumode() ? "\\<Left>" : "\\<Up>"', { expr = true, noremap = true })
 vim.api.nvim_set_keymap("c", "<Down>", 'wildmenumode() ? "\\<Right>" : "\\<Down>"', { expr = true, noremap = true })
 vim.api.nvim_set_keymap("c", "<Left>", 'wildmenumode() ? "\\<Up>" : "\\<Left>"', { expr = true, noremap = true })
 vim.api.nvim_set_keymap("c", "<Right>", 'wildmenumode() ? "\\<Down>" : "\\<Right>"', { expr = true, noremap = true })
-
-vim.keymap.set({ "n", "v" }, "<END>", "g<END>")
-vim.keymap.set({ "n", "v" }, "<HOME>", "g<HOME>")
 
 vim.keymap.set("n", "<leader>tc", function()
 	---@diagnostic disable-next-line: undefined-field

@@ -15,7 +15,7 @@ return {
 			},
 		})
 
-		-- Disable untuk buffer types tertentu
+		-- Disable for certain filetypes
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = {
 				"help",
