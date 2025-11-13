@@ -86,7 +86,7 @@ nvim
 | `H`                   | `n`      | Show dotfiles                             |
 | `I`                   | `n`      | Show ignored files                        |
 | `d`                   | `n`      | Delete a file or directory                |
-| `d`                   | `n`      | Create a file or directory                |
+| `a`                   | `n`      | Create a file or directory                |
 
 ## Shortcuts for Flash
 
