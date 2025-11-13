@@ -160,3 +160,6 @@ end, { desc = "Toggle clipboard sync" })
 
 -- esc twice for normal mode in terminal mode
 vim.keymap.set("t", "<esc><esc>", "<C-\\><C-n>")
+
+-- enabled built-in todo comments
+vim.cmd("hi clear todo")

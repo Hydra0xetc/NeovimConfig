@@ -1,20 +1,37 @@
 return {
 	"akinsho/bufferline.nvim",
 	config = function()
-		require("bufferline").setup({
+		local bufferline = require("bufferline")
+		bufferline.setup({
 			options = {
-				mode = "buffers",
+				style_preset = {
+					bufferline.style_preset.minimal,
+					bufferline.style_preset.no_italic,
+				},
 				show_buffer_close_icons = false,
 				show_close_icon = false,
-				separator_style = "thin",
+				separator_style = "thick",
 				offsets = {
 					{
 						filetype = "NvimTree",
 						text = "File Explorer",
 						highlight = "Directory",
+						separator = true,
 						text_align = "left",
 					},
 				},
+				diagnostics = "nvim_lsp",
+
+				diagnostics_indicator = function(count, level)
+					local icons = {
+						error = " ",
+						warning = " ",
+						hint = "󰌵 ",
+						info = " ",
+					}
+					local icon = icons[level] or " "
+					return " " .. icon .. count
+				end,
 			},
 		})
 
