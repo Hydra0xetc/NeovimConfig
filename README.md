@@ -23,7 +23,7 @@ npm install -g bash-language-server
 ## Installation
 1. **Install neovim, fd-find, ripgrep, git**
     ```bash
-    apt install neovim git fd ripgrep
+    pkg install neovim git fd ripgrep termux-api
     ```
 2. **Clone my neovim config repo**
     ```bash
