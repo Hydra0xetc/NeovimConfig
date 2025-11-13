@@ -10,7 +10,7 @@ return {
 				border = "both",
 			},
 			draw = {
-				delay = 50,
+				delay = 55,
 				-- uncommnet this to disable animation
 				-- animation = require("mini.indentscope").gen_animation.none(),
 			},

@@ -94,6 +94,12 @@ nvim
 |-----------------------|----------|-------------------------------------------|
 | `s`                   | `n`      | Trigger flash                             |
 
+## Shortcuts for Gitsigns
+
+| **Keybinding**        | **Mode** | **Description**                           |
+|-----------------------|----------|-------------------------------------------|
+| `ss`                  | `n`      | Toggle gitsigns                           |
+
 ## Shortcuts for Fugutive
 
 | **Keybinding**        | **Mode** | **Description**                           |

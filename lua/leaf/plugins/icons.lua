@@ -24,6 +24,11 @@ return {
 				icon = "",
 				name = "Html",
 			},
+			["css"] = {
+				color = "#1572b6",
+				icon = "",
+				name = "Css",
+			},
 			-- ["lua"] = {
 			-- 	color = "#366B8A",
 			-- 	icon = "",
