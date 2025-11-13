@@ -11,7 +11,8 @@ return {
 			},
 			draw = {
 				delay = 50,
-				animation = require("mini.indentscope").gen_animation.none(),
+				-- uncommnet this to disable animation
+				-- animation = require("mini.indentscope").gen_animation.none(),
 			},
 		})
 
@@ -25,6 +26,7 @@ return {
 				"toggleterm",
 				"lazyterm",
 				"dashboard",
+				"markdown",
 				"NvimTree",
 				"man",
 				"neo-tree",
