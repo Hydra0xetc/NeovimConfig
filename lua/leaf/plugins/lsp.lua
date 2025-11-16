@@ -112,7 +112,7 @@ return {
 			})
 
 			-- Python LSP
-			vim.lsp.config("pyright", {
+			vim.lsp.config("basedpyright", {
 				capabilities = capabilities,
 				cmd = { "/data/data/com.termux/files/usr/bin/basedpyright-langserver", "--stdio" },
 				settings = {
@@ -152,7 +152,7 @@ return {
 			-- activate lsp
 			vim.lsp.enable("lua_ls")
 			vim.lsp.enable("tsserver")
-			vim.lsp.enable("pyright")
+			vim.lsp.enable("basedpyright")
 			vim.lsp.enable("clangd")
 			vim.lsp.enable("rust-analyzer")
 			vim.lsp.enable("vscode-css-language-server")

@@ -16,7 +16,7 @@ return {
 			-- 			enable = true,
 			-- 			open_win_config = {
 			-- 				border = "rounded",
-			-- 				width = 50,
+			-- 				width = 30,
 			-- 				height = 30,
 			-- 			},
 			-- 		},
