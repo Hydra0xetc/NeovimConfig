@@ -25,6 +25,11 @@ npm install -g bash-language-server
     ```bash
     pkg install neovim git fd ripgrep termux-api
     ```
+    Make sure you have [Termux-api](https://f-droid.org/packages/com.termux.api/) installed,
+    it will enable copy or paste from the system clipboard. If you don't want that then 
+    skip the termux-api installation, and also make sure your font supports unique 
+    characters so that it doesn't look strange. After that:
+
 2. **Clone my neovim config repo**
     ```bash
     git clone https://github.com/Hydra0xetc/NeovimConfig.git ~/.config/nvim
@@ -34,6 +39,7 @@ after that launch neovim
 ```bash
 nvim
 ```
+wait until the installation process is complete
 
 ### Notes
 
