@@ -64,6 +64,7 @@ wait until the installation process is complete
 | **Keybinding**        | **Mode** | **Description**                           |
 |-----------------------|----------|-------------------------------------------|
 | `gd`                  | `n`      | Go to definitions                         |
+| `gr`                  | `n`      | Go to references                          |
 | `gD`                  | `n`      | Go to declaration                         |
 | `gi`                  | `n`      | Go to implementation                      |
 | `<C-k>`               | `n`      | Singature help                            |

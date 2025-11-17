@@ -39,10 +39,13 @@ return {
 				end,
 			})
 
+			-- change your prefix system
+			local prefix = "/data/data/com.termux/files/usr"
+
 			-- Lua LSP
 			vim.lsp.config("lua_ls", {
 				capabilities = capabilities,
-				cmd = { "/data/data/com.termux/files/usr/bin/lua-language-server" },
+				cmd = { prefix .. "/bin/lua-language-server" },
 				settings = {
 					Lua = {
 						runtime = {
@@ -65,7 +68,7 @@ return {
 			-- TypeScript/JavaScript LSP
 			vim.lsp.config("tsserver", {
 				capabilities = capabilities,
-				cmd = { "/data/data/com.termux/files/usr/bin/typescript-language-server", "--stdio" },
+				cmd = { prefix .. "/bin/typescript-language-server", "--stdio" },
 				filetypes = {
 					"javascript",
 					"javascriptreact",
@@ -80,7 +83,7 @@ return {
 			-- Html
 			vim.lsp.config("vscode-html-language-server", {
 				capabilities = capabilities,
-				cmd = { "/data/data/com.termux/files/usr/bin/vscode-html-language-server", "--stdio" },
+				cmd = { prefix .. "/bin/vscode-html-language-server", "--stdio" },
 				filetypes = {
 					"html",
 					"htmlx",
@@ -91,7 +94,7 @@ return {
 			-- Css
 			vim.lsp.config("vscode-css-language-server", {
 				capabilities = capabilities,
-				cmd = { "/data/data/com.termux/files/usr/bin/vscode-css-language-server", "--stdio" },
+				cmd = { prefix .. "/bin/vscode-css-language-server", "--stdio" },
 				filetypes = {
 					"html",
 					"css",
@@ -103,7 +106,7 @@ return {
 			-- Bash
 			vim.lsp.config("bash-language-server", {
 				capabilities = capabilities,
-				cmd = { "/data/data/com.termux/files/usr/bin/bash-language-server", "start" },
+				cmd = { prefix .. "/bin/bash-language-server", "start" },
 				filetypes = {
 					"sh",
 					"bash",
@@ -114,13 +117,13 @@ return {
 			-- Python LSP
 			vim.lsp.config("basedpyright", {
 				capabilities = capabilities,
-				cmd = { "/data/data/com.termux/files/usr/bin/basedpyright-langserver", "--stdio" },
+				cmd = { prefix .. "/bin/basedpyright-langserver", "--stdio" },
 				settings = {
 					basedpyright = {
 						analysis = {
 							autoSearchPaths = true,
 							useLibraryCodeForTypes = true,
-							-- diagnosticMode = "openFilesOnly",
+							reportTypeshedErrors = false,
 							typeCheckingMode = "basic",
 						},
 					},
@@ -131,7 +134,7 @@ return {
 			vim.lsp.config("clangd", {
 				capabilities = capabilities,
 				cmd = {
-					"clangd",
+					prefix .. "/bin/clangd",
 					"--compile-commands-dir=.",
 					-- "--clang-tidy",
 				},
@@ -139,7 +142,7 @@ return {
 
 			vim.lsp.config("rust-analyzer", {
 				capabilities = capabilities,
-				cmd = { "rust-analyzer" },
+				cmd = { prefix .. "/bin/rust-analyzer" },
 				filetypes = { "rust" },
 				settings = {
 					["rust-analyzer"] = {
@@ -150,14 +153,14 @@ return {
 			})
 
 			-- activate lsp
-			vim.lsp.enable("lua_ls")
-			vim.lsp.enable("tsserver")
-			vim.lsp.enable("basedpyright")
-			vim.lsp.enable("clangd")
-			vim.lsp.enable("rust-analyzer")
-			vim.lsp.enable("vscode-css-language-server")
-			vim.lsp.enable("vscode-html-language-server")
-			vim.lsp.enable("bash-language-server")
+			vim.lsp.enable("lua_ls", true)
+			vim.lsp.enable("tsserver", true)
+			vim.lsp.enable("basedpyright", true)
+			vim.lsp.enable("clangd", true)
+			vim.lsp.enable("rust-analyzer", true)
+			vim.lsp.enable("vscode-css-language-server", true)
+			vim.lsp.enable("vscode-html-language-server", true)
+			vim.lsp.enable("bash-language-server", true)
 
 			-- to activate linting
 			local diagnostics_enabled = true
