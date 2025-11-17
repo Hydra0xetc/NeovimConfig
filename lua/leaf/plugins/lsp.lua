@@ -39,13 +39,10 @@ return {
 				end,
 			})
 
-			-- change your prefix system
-			local prefix = "/data/data/com.termux/files/usr"
-
 			-- Lua LSP
 			vim.lsp.config("lua_ls", {
 				capabilities = capabilities,
-				cmd = { prefix .. "/bin/lua-language-server" },
+				cmd = { vim.fn.exepath("lua-language-server") },
 				settings = {
 					Lua = {
 						runtime = {
@@ -68,7 +65,7 @@ return {
 			-- TypeScript/JavaScript LSP
 			vim.lsp.config("tsserver", {
 				capabilities = capabilities,
-				cmd = { prefix .. "/bin/typescript-language-server", "--stdio" },
+				cmd = { vim.fn.exepath("typescript-language-server"), "--stdio" },
 				filetypes = {
 					"javascript",
 					"javascriptreact",
@@ -83,7 +80,7 @@ return {
 			-- Html
 			vim.lsp.config("vscode-html-language-server", {
 				capabilities = capabilities,
-				cmd = { prefix .. "/bin/vscode-html-language-server", "--stdio" },
+				cmd = { vim.fn.exepath("vscode-html-language-server"), "--stdio" },
 				filetypes = {
 					"html",
 					"htmlx",
@@ -94,7 +91,7 @@ return {
 			-- Css
 			vim.lsp.config("vscode-css-language-server", {
 				capabilities = capabilities,
-				cmd = { prefix .. "/bin/vscode-css-language-server", "--stdio" },
+				cmd = { vim.fn.exepath("vscode-css-language-server"), "--stdio" },
 				filetypes = {
 					"html",
 					"css",
@@ -106,7 +103,7 @@ return {
 			-- Bash
 			vim.lsp.config("bash-language-server", {
 				capabilities = capabilities,
-				cmd = { prefix .. "/bin/bash-language-server", "start" },
+				cmd = { vim.fn.exepath("bash-language-server"), "--stdio" },
 				filetypes = {
 					"sh",
 					"bash",
@@ -117,7 +114,7 @@ return {
 			-- Python LSP
 			vim.lsp.config("basedpyright", {
 				capabilities = capabilities,
-				cmd = { prefix .. "/bin/basedpyright-langserver", "--stdio" },
+				cmd = { vim.fn.exepath("basedpyright"), "--stdio" },
 				settings = {
 					basedpyright = {
 						analysis = {

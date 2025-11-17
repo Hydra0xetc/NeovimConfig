@@ -2,7 +2,7 @@ return {
 	-- enabled = false,
 	"nvimdev/dashboard-nvim",
 	-- lazy = false,
-	event = "UIEnter",
+	event = "VimEnter",
 	opts = function()
 		local logo = [[
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
