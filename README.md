@@ -115,7 +115,7 @@ wait until the installation process is complete
 
 | **Keybinding**        | **Mode** | **Description**                           |
 |-----------------------|----------|-------------------------------------------|
-| `ss`                  | `n`      | Toggle gitsigns                           |
+| `gs`                  | `n`      | Toggle gitsigns                           |
 
 ## Shortcuts for Fugutive
 
