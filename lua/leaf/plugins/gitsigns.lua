@@ -19,7 +19,7 @@ return {
 
 			current_line_blame = true,
 
-			vim.keymap.set("n", "ss", function()
+			vim.keymap.set("n", "gs", function()
 				require("gitsigns").toggle_signs()
 			end),
 		})
