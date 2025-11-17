@@ -131,15 +131,14 @@ return {
 			vim.lsp.config("clangd", {
 				capabilities = capabilities,
 				cmd = {
-					prefix .. "/bin/clangd",
+					vim.fn.exepath("clangd"),
 					"--compile-commands-dir=.",
-					-- "--clang-tidy",
 				},
 			})
 
 			vim.lsp.config("rust-analyzer", {
 				capabilities = capabilities,
-				cmd = { prefix .. "/bin/rust-analyzer" },
+				cmd = { vim.fn.exepath("rust-analyzer") },
 				filetypes = { "rust" },
 				settings = {
 					["rust-analyzer"] = {

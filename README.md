@@ -37,8 +37,8 @@ nvim
 ```
 wait until the installation process is complete
 
-for keymaps/shortcuts see [keymaps](./docs/keymaps.md)
-about lsp see [lsp](./docs/lsp.md)
+- for keymaps/shortcuts see [keymaps](./docs/keymaps.md)
+- about lsp see [lsp](./docs/lsp.md)
 
 ## FAQ
 
