@@ -114,7 +114,7 @@ return {
 			-- Python LSP
 			vim.lsp.config("basedpyright", {
 				capabilities = capabilities,
-				cmd = { vim.fn.exepath("basedpyright"), "--stdio" },
+				cmd = { vim.fn.exepath("basedpyright-langserver"), "--stdio" },
 				settings = {
 					basedpyright = {
 						analysis = {
