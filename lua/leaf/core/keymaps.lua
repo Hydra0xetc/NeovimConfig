@@ -163,3 +163,33 @@ vim.keymap.set("t", "<esc><esc>", "<C-\\><C-n>")
 
 -- enabled built-in todo comments
 vim.cmd("hi clear todo")
+
+vim.api.nvim_create_user_command("LeafUpdate", function()
+	local config_dir = vim.fn.stdpath("config")
+	local git_dir = config_dir .. "/.git"
+
+	-- ensure config_dir is string beacuse chdir wanted string
+	if type(config_dir) ~= "string" or config_dir == "" then
+		vim.notify("Invalid config directory path" .. vim.log.levels.ERROR)
+		return
+	end
+
+	if vim.fn.isdirectory(git_dir) == 0 then
+		vim.notify("Directory '.git' not found in: " .. config_dir, vim.log.levels.ERROR)
+		return
+	end
+
+	vim.notify("Update leaf config...", vim.log.levels.INFO)
+
+	local current_dir = vim.fn.getcwd()
+	vim.fn.chdir(config_dir)
+
+	local result = vim.fn.system({ "git", "pull" })
+	vim.fn.chdir(current_dir)
+
+	if vim.v.shell_error ~= 0 then
+		vim.notify("Failed to update leaf: " .. result, vim.log.levels.ERROR)
+	else
+		vim.notify("Update complete!!, now restart your neovim", vim.log.levels.INFO)
+	end
+end, {})

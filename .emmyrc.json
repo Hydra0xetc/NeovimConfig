@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+  "diagnostics": {
+    "disable": [
+      "unnecessary-if"
+    ]
+  },
+  "runtime": {
+    "requirePattern": [
+      "lua/?.lua",
+      "lua/?/init.lua",
+      "?/lua/?.lua",
+      "?/lua/?/init.lua"
+    ],
+    "version": "LuaJIT"
+  },
+  "workspace": {
+    "ignoreGlobs": [
+      "**/*_spec.lua"
+    ],
+    "library": [
+      "$VIMRUNTIME",
+      "$HOME/.local/share/nvim/lazy"
+    ]
+  }
+}
