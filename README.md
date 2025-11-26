@@ -1,5 +1,10 @@
 # My Neovim Config
 
+![GitHub Stars](https://img.shields.io/github/stars/Hydra0xetc/NeovimConfig?style=for-the-badge&logo=github&color=yellow)
+![Neovim](https://img.shields.io/badge/Neovim-0.9.0-57A143?style=for-the-badge&logo=neovim&logoColor=white)
+![Last Commit](https://img.shields.io/github/last-commit/Hydra0xetc/NeovimConfig?style=for-the-badge&logo=git&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+
 ![Preview](./image/preview.jpg) 
 
 by the way i not use Mason for my lsp, you can use arrow key to select
