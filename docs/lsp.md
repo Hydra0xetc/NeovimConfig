@@ -4,7 +4,7 @@
 - c/c++ (clangd)
 - bash (bash-language-server)
 - javascript, html, css (vscode-langservers-extracted)
-- lua (lua-language-server)
+- lua (emmylua_ls)
 - rust (rust-analyzer)
 
 you can install lsp server using package manager or npm, like example:
