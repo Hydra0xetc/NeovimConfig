@@ -39,26 +39,47 @@ return {
 				end,
 			})
 
+			--[[
+            vim.lsp.config("lua_ls", {
+                capabilities = capabilities,
+                cmd = { vim.fn.exepath("lua-language-server") },
+                settings = {
+                    lua = {
+                        runtime = {
+                            version = "luajit",
+                        },
+                        diagnostics = {
+                            globals = { "vim" },
+                        },
+                        workspace = {
+                            library = vim.api.nvim_get_runtime_file("", true),
+                            checkthirdparty = false,
+                        },
+                        telemetry = {
+                            enable = false,
+                        },
+                    },
+                },
+            })
+            --]]
+
 			-- Lua LSP
-			vim.lsp.config("lua_ls", {
+			vim.lsp.config("emmylua_ls", {
 				capabilities = capabilities,
-				cmd = { vim.fn.exepath("lua-language-server") },
+				cmd = { vim.fn.exepath("emmylua_ls") },
 				settings = {
-					Lua = {
-						runtime = {
-							version = "LuaJIT",
-						},
-						diagnostics = {
-							globals = { "vim" },
-						},
-						workspace = {
-							library = vim.api.nvim_get_runtime_file("", true),
-							checkThirdParty = false,
-						},
-						telemetry = {
-							enable = false,
-						},
+					workspace = {
+						library = vim.api.nvim_get_runtime_file("", true),
+						checkThirdParty = true,
+						ignoreDir = { "node_modules", ".git", "dist" },
+						maxPreload = 1000,
 					},
+				},
+				root_markers = {
+					".emmyrc.json",
+				},
+				filetypes = {
+					"lua",
 				},
 			})
 
@@ -149,7 +170,8 @@ return {
 			})
 
 			-- activate lsp
-			vim.lsp.enable("lua_ls", true)
+			vim.lsp.enable("lua_ls", false)
+			vim.lsp.enable("emmylua_ls", true)
 			vim.lsp.enable("tsserver", true)
 			vim.lsp.enable("basedpyright", true)
 			vim.lsp.enable("clangd", true)
